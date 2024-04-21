@@ -1,5 +1,9 @@
 :root {
     --base-color: #b92653;
+    --base-color-hover: #e14373;
+    --base-color-active: #89183a;
+    --transition-duration: .3s;
+    --gray-color: #d1d1d1;
 }
 
 html {
@@ -58,4 +62,55 @@ img {
     height: 2px;
     left: calc(50% - 40px);
     bottom: -15px;
+}
+
+/* Reset styles for buttons */
+.btn-reset {
+    border: none;
+    outline: none;
+    background-color: none;
+    padding: 0;
+}
+.btn-base {
+    padding: 6px 32px;
+    color: #fff;
+    background-color: var(--base-color);
+    border-radius: 14px;
+    transition: background-color var(--transition-duration);
+    cursor: pointer;
+}
+.btn-base:hover {
+    background-color: var(--base-color-hover);
+    transition: var(--transition-duration);
+}
+.btn-base:active {
+    background-color: var(--base-color-active);
+}
+.btn-base:focus {
+    outline: var(--base-color) 1px solid;
+    outline-offset: 3px;
+}
+
+/* Gray buttons */
+.btn-gray {
+    padding: 6px 32px;
+    color: #000;
+    border: 1px solid var(--gray-color);
+    border-radius: 14px;
+    transition: background-color var(--transition-duration), border-color var(--transition-duration) color var(--transition-duration);
+    cursor: pointer;
+}
+.btn-gray:hover {
+    background-color: var(--base-color-hover);
+    border-color: var(--base-color-hover);
+    color: #fff;
+}
+.btn-gray:active {
+    background-color: var(--base-color-active);
+    border-color: var(--base-color-active);
+    color: #fff;
+}
+.btn-gray:focus {
+    outline: var(--base-color) 1px solid;
+    outline-offset: 3px;
 }
