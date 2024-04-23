@@ -287,7 +287,7 @@ img {
   gap: 5px;
 }
 .client-card {
-  
+  perspective: 500px;
 }
 .client-card__link {
   display: block;
@@ -296,11 +296,17 @@ img {
   padding: 40px;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color var(--transition-duration);
+  transition: background-color var(--transition-duration), transform .5s;
 }
 .client-card__link:hover {
   background-color: var(--base-color);
+  transform: rotateY(-20deg) rotateZ(20deg) translate(20px);
 }
+.client-card:nth-child(2n) .client-card__link:hover {
+  transform: rotateY(20deg);
+}
+
+
 .client-card__link::before {
   content: '';
   display: block;
