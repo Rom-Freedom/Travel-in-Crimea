@@ -240,3 +240,40 @@ img {
   padding: 8px 14px;
 }
 
+/* Step card */
+.step-card__box {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.step-card {
+  position: relative;
+  padding: 25px;
+  background-color: #fff;
+}
+.step-card__desc {
+  margin-bottom: 0;
+}
+.step-card::after {
+  content: '1';
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  position: absolute;
+  background-color: var(--base-color);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -25px;
+  top: calc(50% - 25px);
+}
+.step-card:nth-child(2n):after {
+  right: inherit;
+  left: -25px;
+}
+
